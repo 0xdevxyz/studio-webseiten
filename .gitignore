@@ -1,0 +1,22 @@
+# Secrets – niemals committen
+.env
+**/.env
+
+# Laufzeit-/Sitzungsdaten
+**/sessions.json
+
+# Vom Editor verwaltete Uploads
+**/assets/uploads/
+
+# Abhängigkeiten / Build
+node_modules/
+
+# Backups & temporäre Dateien
+*.bak
+*.bak-*
+*.tar.gz
+*.log
+
+# OS-Artefakte
+.DS_Store
+Thumbs.db
