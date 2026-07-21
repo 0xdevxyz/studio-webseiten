@@ -396,14 +396,19 @@ h1.hero-title .accent {
 
 /* Längere Willkommens-Headline: kleiner als die Standard-Hero-Headline */
 h1.hero-title.hero-title-welcome {
-  font-size: clamp(1.9rem, 3.2vw, 3rem);
-  line-height: 1.15;
+  font-size: clamp(1.75rem, 2.7vw, 2.6rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  max-width: 640px;
+  margin-bottom: 28px;
 }
 
 .hero-content .hero-subtitle {
-  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
-  max-width: 620px;
-  margin-bottom: 20px;
+  font-size: clamp(0.92rem, 1.4vw, 1rem);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 580px;
+  line-height: 1.75;
+  margin-bottom: 18px;
 }
 
 .hero-content .hero-subtitle + .hero-subtitle {
