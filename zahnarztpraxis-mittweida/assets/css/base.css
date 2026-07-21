@@ -285,7 +285,10 @@ select {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  /* generisches section-Padding neutralisieren, sonst hängt das
+     Portrait 100px über der Unterkante */
+  padding: 0;
 }
 
 .hero-bg {
@@ -300,16 +303,52 @@ select {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(13, 17, 23, 0.75) 0%, rgba(13, 17, 23, 0.3) 100%);
+  background: linear-gradient(90deg, rgba(13, 17, 23, 0.45) 0%, rgba(13, 17, 23, 0.7) 55%, rgba(13, 17, 23, 0.85) 100%);
 }
 
-.hero-content {
+.hero-inner {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px 32px 80px;
+  padding: 120px 32px 0;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  grid-template-rows: 1fr;
+  gap: 40px;
+  align-items: end;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: stretch;
+  min-height: 0;
+}
+
+/* Höhe treibt die Größe: Bild wird so groß wie vertikal möglich
+   und steht unten bündig auf der Hero-Kante auf. */
+.hero-image img {
+  width: auto;
+  /* darf die schmale Bildspalte überragen, sonst deckelt die
+     Spaltenbreite die Größe und die Höhensteuerung greift nie */
+  max-width: 128%;
+  height: auto;
+  max-height: calc(100vh - 140px);
+  display: block;
+  margin-top: auto;
+  /* schließt exakt mit der Hero-Unterkante ab = setzt auf der
+     weißen Begrüßungs-Section auf */
+  margin-bottom: -1px;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.45));
+}
+
+.hero-content {
+  width: 100%;
+  align-self: center;
+  padding-bottom: 96px;
 }
 
 .hero-eyebrow {
@@ -335,7 +374,7 @@ select {
 }
 
 h1.hero-title {
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.75rem, 4.6vw, 4.75rem);
   font-weight: 900;
   color: var(--white);
   line-height: 1.05;
@@ -1658,6 +1697,39 @@ section {
    RESPONSIVE – 1024px
    ========================================================= */
 @media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .hero-image {
+    order: -1;
+    max-width: 360px;
+  }
+
+  /* gestapeltes Layout: kein Überstand, sonst überlappt das Portrait den Text */
+  .hero-image img {
+    max-width: 100%;
+    max-height: none;
+    margin-bottom: 0;
+  }
+
+  .hero-eyebrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
   .praxis-grid {
     grid-template-columns: 1fr;
     gap: 60px;
@@ -1725,7 +1797,7 @@ section {
     font-size: 0.8rem;
   }
 
-  .hero-content {
+  .hero-inner {
     padding: 100px 20px 60px;
   }
 
@@ -1906,8 +1978,13 @@ section {
     display: none;
   }
 
-  .hero-content {
+  .hero-inner {
     padding: 0;
+    display: block;
+  }
+
+  .hero-image {
+    display: none;
   }
 
   .hero-title,
