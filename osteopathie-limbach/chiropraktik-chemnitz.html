@@ -87,6 +87,9 @@ p{color:var(--soft)}
 .lead-txt{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
 .lead-txt h2{font-size:clamp(1.6rem,3vw,2.2rem)}
 .lead-txt p{font-size:1.05rem}
+.usp{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.usp li{display:flex;gap:11px;align-items:flex-start;color:var(--soft);font-size:.98rem;font-weight:500}
+.usp svg{flex:none;margin-top:5px;color:var(--sage-dk)}
 .lead-media{border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
 .lead-media img{width:100%;height:100%;object-fit:cover}
 
@@ -281,6 +284,11 @@ mark.todo{background:#fff3bf;color:#5f4b00;padding:1px 6px;border-radius:4px;fon
         <h2>Ihre Praxis vor den Toren von Chemnitz</h2>
         <p>Sie suchen einen Chiropraktiker in Chemnitz und finden keinen freien Termin? In unserer Praxis in Limbach-Oberfrohna behandeln wir regelmäßig Patientinnen und Patienten aus Chemnitz und dem gesamten Umland. Die Fahrt dauert vom Chemnitzer Zentrum aus <mark class="todo">ca. 20 Minuten — bitte prüfen</mark>, direkt vor der Tür gibt es Parkplätze.</p>
         <p>Wir arbeiten chiropraktisch und osteopathisch — je nachdem, was zu Ihrem Beschwerdebild passt. Christoph Uhlmann ist Heilpraktiker, zertifizierter Therapeut für ganzheitliche Chiropraktik und Manuelle Gelenktherapie sowie zertifizierter HWS- und Atlas-Therapeut.</p>
+        <ul class="usp">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Termine rund um die Uhr online buchbar — ohne Warteschleife</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Chiropraktik und Osteopathie unter einem Dach</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5L20 7"/></svg>Parkplätze direkt vor der Tür, barrierefreier Zugang</li>
+        </ul>
       </div>
       <div class="lead-media reveal">
         <picture><source srcset="assets/images/chiropraktik-untersuchung-praxis-uhlmann.webp" type="image/webp"><img src="assets/images/chiropraktik-untersuchung-praxis-uhlmann.jpg" width="1400" height="1050" alt="Christoph Uhlmann prüft Beweglichkeit und Statik einer Patientin auf der Behandlungsliege in Limbach-Oberfrohna" loading="lazy"></picture>
@@ -496,6 +504,46 @@ mark.todo{background:#fff3bf;color:#5f4b00;padding:1px 6px;border-radius:4px;fon
   <a href="/datenschutz.html">Datenschutz</a>
 </aside>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wann ist Chiropraktik sinnvoll?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Typische Anlässe sind Rückenschmerzen, Nackenverspannungen, vom Nacken ausgehende Kopfschmerzen, Ischias-Beschwerden, Blockaden in Becken oder Brustwirbelsäule, Kiefergelenkbeschwerden (CMD) sowie Beschwerden nach einseitiger Belastung. Chiropraktik ersetzt keine ärztliche Abklärung — bei starken oder plötzlichen Beschwerden, Taubheitsgefühlen oder nach einem Unfall gehört zuerst eine ärztliche Untersuchung dazu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Krankenkasse übernimmt die Kosten für Chiropraktik?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Private Krankenversicherungen erstatten Behandlungen je nach Tarif ganz oder teilweise. Heilpraktiker-Zusatzversicherungen übernehmen die Kosten in der Regel anteilig. Für gesetzlich Versicherte ist die chiropraktische Behandlung durch einen Heilpraktiker keine Kassenleistung; einige Kassen bezuschussen naturheilkundliche Verfahren über Bonusprogramme. Die Abrechnung erfolgt nach der Gebührenordnung für Heilpraktiker (GebüH)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Chiropraktik und Chirotherapie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chirotherapie ist eine ärztliche Zusatzbezeichnung und wird von Ärztinnen und Ärzten mit entsprechender Weiterbildung ausgeübt. Chiropraktik wird in Deutschland überwiegend von Heilpraktikern angeboten. Die Techniken überschneiden sich, der rechtliche Rahmen und die Abrechnung unterscheiden sich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Chiropraktik oder Osteopathie — was passt zu mir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chiropraktik arbeitet mit gezielten, kurzen Impulsen an Wirbelsäule und einzelnen Gelenken — typisch bei akuten Blockaden und klar lokalisiertem Schmerz. Osteopathie betrachtet den ganzen Körper mit langsamen, lösenden Handgriffen — typisch bei länger bestehenden, diffusen Beschwerden. Da unsere Praxis beide Verfahren anbietet, entscheiden wir gemeinsam beim ersten Termin, welcher Ansatz passt, und kombinieren beides, wenn es sinnvoll ist."
+      }
+    }
+  ]
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
