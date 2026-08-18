@@ -33,7 +33,9 @@ section{position:relative}
 h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em;font-weight:700;color:var(--ink)}
 
 /* ---------- buttons / pills ---------- */
-.pill{display:inline-flex;align-items:center;gap:8px;background:rgba(153,159,121,.16);color:var(--sage-dk);border-radius:999px;padding:7px 16px;font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;width:fit-content}
+.pill{display:inline-flex;align-items:center;gap:12px;color:var(--sage-dk);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;width:fit-content}
+.pill::before{content:"";width:26px;height:1px;background:var(--sage);flex:none}
+.sec-head .pill::after{content:"";width:26px;height:1px;background:var(--sage);flex:none}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--body);font-weight:600;font-size:.96rem;padding:15px 26px;border-radius:12px;border:1px solid transparent;cursor:pointer;transition:.25s;white-space:nowrap}
 .btn svg{flex:none}
 .btn-primary{background:var(--sage);color:#fff;box-shadow:0 14px 28px -14px rgba(124,132,96,.85)}
@@ -76,7 +78,8 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.12;letter-spacing:-.01em;font-
 .burger svg{margin:auto}
 
 .hero-center{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 22px 72px;max-width:880px;margin:0 auto}
-.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:999px;padding:8px 18px;font-size:.82rem;font-weight:600;margin-bottom:24px}
+.hero-badge{display:inline-flex;align-items:center;gap:12px;color:rgba(255,255,255,.9);font-size:.85rem;font-weight:500;letter-spacing:.03em;margin-bottom:24px;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+.hero-badge::before{content:"";width:26px;height:1px;background:rgba(255,255,255,.65);flex:none}
 .hero h1{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);text-shadow:0 2px 30px rgba(0,0,0,.4);margin-bottom:20px;font-weight:600}
 .hero-sub{color:rgba(255,255,255,.92);font-size:clamp(1rem,1.6vw,1.18rem);max-width:640px;margin-bottom:34px}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
